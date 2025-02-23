@@ -1,8 +1,5 @@
 'use client'
-import Link from "next/link";
 import { useState } from "react";
-
-const pathData = [{ name: 'About', path: '/dashboard/about' }, { name: 'Settings', path: '/dashboard/settings' }]
 
 export default function DashboardLayout({
     children,

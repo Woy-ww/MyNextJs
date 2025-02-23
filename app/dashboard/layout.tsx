@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const pathData = [{ name: 'About', path: '/dashboard/about' }, { name: 'Settings', path: '/dashboard/settings' }]
@@ -10,13 +11,14 @@ export default function DashboardLayout({
     children: React.ReactNode;
 }>) {
     const [count, setCount] = useState(0)
+    const pathname = usePathname()
     return (
         <div>
             <div>
                 {
                     pathData.map(item => {
                         return (
-                            <Link style={{ marginRight: '20px' }} href={item.path}>{item.name}</Link>
+                            <Link style={{ marginRight: '20px', color: pathname === item.path ? 'red' : '' }} href={item.path}>{item.name}</Link>
                         )
                     })
                 }

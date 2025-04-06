@@ -1,4 +1,3 @@
-import Image from "next/image";
 import homeSrc from '../public/哈登.png'
 import Hero from "./components/hero";
 import { Metadata } from "next";

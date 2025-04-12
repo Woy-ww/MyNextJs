@@ -16,9 +16,9 @@ export default function hreader() {
                 <Link className="text-3xl font-bold" href="/">Home</Link>
                 <div className="text-xl space-x-4">
                     {
-                        linkData.map(link => {
+                        linkData.map((link, index) => {
                             return (
-                                <Link href={link.path} className={pathname === link.path ? 'text-purple-500' : ''} >{link.name}</Link>
+                                <Link key={index} href={link.path} className={pathname === link.path ? 'text-purple-500' : ''} >{link.name}</Link>
                             )
                         })
                     }

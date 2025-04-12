@@ -1,16 +1,16 @@
 import React from 'react'
-import reliabilitySrc from '../../public/黄猴子.png'
-import Hero from '../components/hero'
+import Hero from '../../components/hero'
+import reliabilitySrc from '../../../public/挨打.png'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-    title: 'Scale'
+    title: 'Reliability'
 }
 export default function page() {
     return (
         <Hero
             imgurl={reliabilitySrc}
             alttxt="Home Image"
-            content='Scale'
+            content='Reliability'
         />
     )
 }
